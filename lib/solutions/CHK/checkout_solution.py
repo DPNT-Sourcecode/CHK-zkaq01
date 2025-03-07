@@ -22,7 +22,7 @@ def checkout(skus):
 
 
     total_cost = 0
-    for item, count in counter:
+    for item, count in counter.items():
         if item in offer:
             offer_cnt, offer_price = offer[item]
             total_cost += (count // offer_cnt) * offer_price
@@ -31,6 +31,11 @@ def checkout(skus):
             total_cost += (count * lookup[item]) if item in lookup else -1
 
     return total_cost
+
+
+
+# print(checkout("ABCa"))
+
 
 
 
