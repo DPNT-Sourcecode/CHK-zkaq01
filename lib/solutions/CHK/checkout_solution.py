@@ -11,7 +11,7 @@ def checkout(skus):
 
 
     if not skus:
-        return -1
+        return 0
 
     if len(skus) == 1:
         return lookup[skus[0]] if skus[0] in lookup else -1
@@ -35,3 +35,7 @@ def checkout(skus):
 
 
 print(checkout(""))
+print(checkout("ABCa"))
+print(checkout("AxA"))
+
+
