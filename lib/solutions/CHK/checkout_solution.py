@@ -28,13 +28,14 @@ def checkout(skus):
             total_cost += (count // offer_cnt) * offer_price
             total_cost += (count % offer_cnt) * lookup[item]
         else:
-            total_cost += (count * lookup[item]) if item in lookup else -1
+            total_cost += (count * lookup[item]) if item in lookup else 0
 
     return total_cost
 
 
 
-# print(checkout("ABCa"))
+print(checkout("ABCa"))
+
 
 
 
