@@ -13,7 +13,3 @@ def checkout(skus):
 
 
     return skus
-
-
-
-
