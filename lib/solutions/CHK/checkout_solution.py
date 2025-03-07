@@ -17,6 +17,7 @@ def checkout(skus):
         return lookup[skus[0]] if skus[0] in lookup else -1
 
     offer = {"A": (3, 130), "B": (2, 45)}
+
     counter = Counter(skus)
 
 
@@ -30,6 +31,7 @@ def checkout(skus):
             total_cost += (count * lookup[item])
 
     return total_cost
+
 
 
 
