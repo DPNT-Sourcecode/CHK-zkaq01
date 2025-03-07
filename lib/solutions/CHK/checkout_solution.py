@@ -16,7 +16,10 @@ def checkout(skus):
     for item, value in counter:
         if item=="B" and value % 2 == 0:
             cost += (value // 2) * 45
-        else:
+        if item=="B" and value % 2 != 0:
+            cost += (value % 2)
+
+
 
         if item=="A" and value % 3 == 0:
             cost += (value // 2) * 130
@@ -24,5 +27,6 @@ def checkout(skus):
 
 
     return skus
+
 
 
