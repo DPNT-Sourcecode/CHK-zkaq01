@@ -28,9 +28,10 @@ def checkout(skus):
             total_cost += (count // offer_cnt) * offer_price
             total_cost += (count % offer_cnt) * lookup[item]
         else:
-            total_cost += (count * lookup[item])
+            total_cost += (count * lookup[item]) if item in lookup else -1
 
     return total_cost
+
 
 
 
