@@ -34,11 +34,4 @@ def checkout(skus):
 
 
 
-print(checkout("ABCa"))
-
-
-
-
-
-
-
+print(checkout(""))
