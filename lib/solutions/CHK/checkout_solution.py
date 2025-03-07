@@ -11,6 +11,10 @@ def checkout(skus):
 
     counter = Counter(skus)
 
+    for c in counter:
+        if c not in lookup:
+            return -1
+
     if not skus:
         return 0
 
@@ -23,8 +27,6 @@ def checkout(skus):
 
     total_cost = 0
     for item, count in counter.items():
-        if item not in lookup[item]:
-            return -1
 
         if item in offer:
             offer_cnt, offer_price = offer[item]
@@ -37,10 +39,6 @@ def checkout(skus):
 
 
 
-# print(checkout(""))
-# print(checkout("ABCa"))
-# print(checkout("AxA"))
-# #  - {"method":"checkout","params":["ABCa"],"id":"CHK_R1_009"}, expected: -1, got: 100
-# #  - {"method":"checkout","params":["AxA"],"id":"CHK_R1_010"}, expected: -1, got: 100
+
 
 
