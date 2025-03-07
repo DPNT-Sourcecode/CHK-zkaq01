@@ -8,10 +8,14 @@ from collections import Counter
 lookup = {"A": 50, "B": 30, "C": 20, "D": 15}
 
 def checkout(skus):
+
+
     if not skus:
         return -1
 
-
+    if len(skus) == 1:
+        return lookup[skus[0]]
+    
     offer = {"A": (3, 130), "B": (2, 45)}
     counter = Counter(skus)
 
@@ -24,6 +28,7 @@ def checkout(skus):
             total_cost += (count % offer_cnt) * lookup[item]
         else:
             total_cost += (count * lookup[item])
-        
+
     return total_cost
+
 
